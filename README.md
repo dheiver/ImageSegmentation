@@ -9,7 +9,7 @@ Este repositório contém um script Python para realizar a segmentação de imag
 ### Instalação
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seuusuario/nome-do-repositorio.git
+   git clone git@github.com:dheiver/ImageSegmentation.git
    cd nome-do-repositorio
    ```
 
@@ -19,22 +19,31 @@ Este repositório contém um script Python para realizar a segmentação de imag
    ```
 
 ### Uso
-1. Baixe o modelo pré-treinado (SAM ViT) e coloque-o na pasta `weights`. Você pode usar o seguinte comando:
+1. **Baixe o modelo pré-treinado (SAM ViT) e coloque-o na pasta `weights`.**
+
+- **Para Linux e macOS:**
    ```bash
    wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth -P weights/
    ```
 
-2. Coloque a imagem que deseja segmentar na pasta `data`.
-
-3. Execute o script Python:
+- **Para Windows (Git Bash):**
    ```bash
-   python main.py
+   curl -O https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth -P weights/
    ```
 
-4. Os resultados serão salvos na pasta `output`.
+- **Para Windows (PowerShell):**
+   ```powershell
+   Invoke-WebRequest -Uri https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth -OutFile weights/sam_vit_h_4b8939.pth
+   ```
+
+2. Coloque a imagem que deseja segmentar na pasta `data`.
+
+3. No arquivo Jupter 'YourImageSegmentation.ipynb' Execute o script Python com a class ImageSegmentation:
+  
+4. Visualize o resultado.
 
 ### Configuração
-- O script `main.py` contém um exemplo de uso da classe `ImageSegmentation`. Você pode ajustar os parâmetros, como tipo de modelo, caminho do checkpoint, e tamanhos de grade, de acordo com suas necessidades.
+- Em 'ExemploImageSegmentation.ipynb' contém um exemplo de uso da classe `ImageSegmentation`. Você pode ajustar os parâmetros, como tipo de modelo, caminho do checkpoint, e tamanhos de grade, de acordo com suas necessidades.
 
 ### Contribuições
 Contribuições são bem-vindas! Se encontrar problemas ou tiver sugestões de melhorias, sinta-se à vontade para abrir uma issue ou enviar um pull request.

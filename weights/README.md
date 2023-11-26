@@ -1,0 +1,1 @@
+# Baixe o modelo pré-treinado (SAM ViT) e coloque-o nesta pasta
