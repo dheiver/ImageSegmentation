@@ -1,0 +1,7 @@
+# Arquivos específicos
+sam_vit_h_4b8939.pth
+
+# Todos os arquivos de imagem
+*.jpeg
+*.jpg
+*.png
